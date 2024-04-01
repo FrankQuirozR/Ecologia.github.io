@@ -25,13 +25,12 @@
         nav {
             background-color: #555;
             padding: 10px;
-            height: calc(100vh - 100px); /* Calcula la altura para ocupar toda la ventana menos el encabezado y el pie de página */
             position: fixed;
-            top: 100px;
+            top: 0; /* Ajusta la posición */
             left: 0;
             width: 200px;
             overflow-y: auto; /* Habilita el desplazamiento si el contenido es demasiado largo */
-            margin: 0; /* Elimina los márgenes */
+            z-index: 1; /* Asegura que la barra de navegación esté por encima del contenido */
         }
         nav ul {
             list-style-type: none;
@@ -56,7 +55,7 @@
         }
         section {
             padding: 20px;
-            margin: 20px 20px 20px 220px; /* Ajusta los márgenes */
+            margin: 80px 20px 20px 220px; /* Ajusta los márgenes */
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -89,6 +88,11 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 1; /* Asegura que el pie de página esté por encima de la barra de desplazamiento */
+        }
+        /* Oculta la barra de desplazamiento */
+        ::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>
