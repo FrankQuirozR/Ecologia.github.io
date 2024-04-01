@@ -31,6 +31,8 @@
             height: 100%;
             overflow-y: auto;
             z-index: 1;
+            width: 200px; /* Ajusta el ancho del menú lateral */
+            margin-right: 5px; /* Ajusta la separación con los cuadros de datos, imágenes y contacto */
         }
         nav ul {
             list-style-type: none;
@@ -55,10 +57,12 @@
         }
         section {
             padding: 20px;
-            margin: 20px 20px 20px 230px; /* Aumenta el margen izquierdo para separarlo del menú */
+            margin: 20px 5px; /* Reducir el margen izquierdo y derecho */
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(100% - 240px); /* Ajusta el ancho de las secciones */
+            /* El 240px es la suma del ancho del menú lateral (200px) y el margen derecho del menú (40px) */
         }
         table {
             width: 100%;
@@ -147,4 +151,3 @@
     </footer>
 </body>
 </html>
-
