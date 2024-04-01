@@ -119,23 +119,69 @@
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
-    <section id="datos">
-        <h2>Datos</h2>
-        <p>Aquí puedes visualizar datos:</p>
-        <table>
-            <tr>
-                <th>Nombre</th>
-                <th>Edad</th>
-            </tr>
-            <tr>
-                <td>Juan</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>Maria</td>
-                <td>30</td>
-            </tr>
-        </table>
+   <section id="datos">
+    <h2>Datos</h2>
+    <p>Los datos utilizados se descargaron de <a href="https://www.gbif.org/species/2482278" target="_blank">GBIF</a>, una red internacional e infraestructura de datos de acceso abierto que ofrece información de biodiversidad de las formas de vida en la tierra.</p>
+    <p>Para acceder a los datos:</p>
+    <ol>
+        <li>Acceda a GBIF con una cuenta de usuario.</li>
+        <li>Diríjase a la sección de Datos y haga clic en Registro de Presencia.</li>
+        <li>En el buscador, introduzca el nombre científico de la especie, en este caso, el Cormorán Guanay (Phalacrocorax bougainvillii).</li>
+        <li>Agregue un filtro, en este caso, Perú.</li>
+        <li>En el Visor del Registro de Presencia, haga clic en el botón de descarga (.csv).</li>
+    </ol>
+</section>
+    </section>
+    <section id="importacion">
+    <h2>Importación</h2>
+    <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+        <p style="font-weight: bold;">Lectura de Datos CSV</p>
+        <p>Se hace la lectura del archivo .csv con read.csv(), el cual contiene argumentos de la ruta del archivo y el tabulador como separador de las columnas representado por "\t".</p>
+        <p>Previamente se debe hacer llamado a las siguientes librerías:</p>
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <ul>
+                <li>library(tidyverse)</li>
+                <li>library(sf)</li>
+                <li>library(ggplot)</li>
+                <li>library(ggplot2)</li>
+                <li>library(RColorBrewer)</li>
+            </ul>
+        </div>
+        <p>Se tipean las siguientes líneas de código:</p>
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <p>Paujil <- read.csv("C:/Users/frank/Desktop/PAUJIL/data_paujil.csv",sep="\t")</p>
+        </div>
+        <br>
+        <p style="font-weight: bold;">Visualización de los Datos CSV</p>
+        <p>Se utilizará el comando view() que permite visualizar los datos en una tabla en Rstudio.</p>
+        <p>Para saber las dimensiones de los datos en números de filas y columnas usamos el comando dim():</p>
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <p>dim(Paujil)</p>
+        </div>
+        <p>Para saber de manera ordenada los nombres de los campos de los datos se usa el comando names() y sort():</p>
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <p>sort(names(Paujil))</p>
+        </div>
+        <p>Para mostrar los datos sin repetir los elementos de una columna específica se usa el comando unique():</p>
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <p>unique(Paujil$countryCode)</p>
+        </div>
+        <p>Para filtrar los datos guardándolos en una variable se usa el comando filter():</p>
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <p>Paujil_filtrado <- filter(Paujil, Paujil$countryCode == "PE")</p>
+            <p>dim(Paujil_filtrado)</p>
+        </div>
+        <p>Para recortar los datos en función de una selección se usa el comando subset():</p>
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <p>Paujil_cortado <- subset(Paujil_filtrado, !is.na(decimalLongitude))</p>
+            <p>dim(Paujil_cortado)</p>
+        </div>
+        <p>Por último, exportamos los datos usando el comando write.csv():</p>
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <p>write.csv(Paujil, "C:/Users/frank/Desktop/PAUJIL/coordenada_data_paujil.csv")</p>
+        </div>
+    </div>
+</section>
     </section>
     <section id="imagenes">
         <h2>Imágenes</h2>
