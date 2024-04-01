@@ -157,29 +157,29 @@
         <p>Se utilizará el comando view() que permite visualizar los datos en una tabla en Rstudio.</p>
         <p>Para saber las dimensiones de los datos en números de filas y columnas usamos el comando dim():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0; padding: 0; list-style: none;>dim(Paujil)</p>
+            <p style="margin: 0;>dim(Paujil)</p>
         </div>
         <p>Para saber de manera ordenada los nombres de los campos de los datos se usa el comando names() y sort():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0; padding: 0; list-style: none;>sort(names(Paujil))</p>
+            <p style="margin: 0;>sort(names(Paujil))</p>
         </div>
         <p>Para mostrar los datos sin repetir los elementos de una columna específica se usa el comando unique():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0; padding: 0; list-style: none;>unique(Paujil$countryCode)</p>
+            <p style="margin: 0;>unique(Paujil$countryCode)</p>
         </div>
         <p>Para filtrar los datos guardándolos en una variable se usa el comando filter():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0; padding: 0; list-style: none;>Paujil_filtrado <- filter(Paujil, Paujil$countryCode == "PE")</p>
-            <p style="margin: 0; padding: 0; list-style: none;>dim(Paujil_filtrado)</p>
+            <p style="margin: 0;>Paujil_filtrado <- filter(Paujil, Paujil$countryCode == "PE")</p>
+            <p style="margin: 0;>dim(Paujil_filtrado)</p>
         </div>
         <p>Para recortar los datos en función de una selección se usa el comando subset():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0; padding: 0; list-style: none;>Paujil_cortado <- subset(Paujil_filtrado, !is.na(decimalLongitude))</p>
-            <p style="margin: 0; padding: 0; list-style: none;>dim(Paujil_cortado)</p>
+            <p style="margin: 0;>Paujil_cortado <- subset(Paujil_filtrado, !is.na(decimalLongitude))</p>
+            <p>dim(Paujil_cortado)</p>
         </div>
         <p>Por último, exportamos los datos usando el comando write.csv():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0; padding: 0; list-style: none;>write.csv(Paujil, "C:/Users/frank/Desktop/PAUJIL/coordenada_data_paujil.csv")</p>
+            <p style="margin: 0;>write.csv(Paujil, "C:/Users/frank/Desktop/PAUJIL/coordenada_data_paujil.csv")</p>
         </div>
     </div>
 </section>
