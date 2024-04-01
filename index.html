@@ -141,45 +141,45 @@
         <p>Previamente se debe hacer llamado a las siguientes librerías:</p>
         <div style="max-width: 100%; max-height: 150px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
             <ul style="margin: 0; padding: 0; list-style: none;">
-                <li style="margin: 0;">library(tidyverse)</li>
-                <li style="margin: 0;">library(sf)</li>
-                <li style="margin: 0;">library(ggplot)</li>
-                <li style="margin: 0;">library(ggplot2)</li>
-                <li style="margin: 0;">library(RColorBrewer)</li>
+                <li style="margin: 0;"><em>library(tidyverse)</em></li>
+                <li style="margin: 0;"><em>library(sf)</em></li>
+                <li style="margin: 0;"><em>library(ggplot)</em></li>
+                <li style="margin: 0;"><em>library(ggplot2)</em></li>
+                <li style="margin: 0;"><em>library(RColorBrewer)</em></li>
             </ul>
         </div>
         <p>Se tipean las siguientes líneas de código:</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0;">Paujil <- read.csv("C:/Users/frank/Desktop/PAUJIL/data_paujil.csv",sep="\t")</p>
+            <p style="margin: 0;"><em>Paujil <- read.csv("C:/Users/frank/Desktop/PAUJIL/data_paujil.csv",sep="\t")</em></p>
         </div>
         <br>
         <p style="font-weight: bold;">Visualización de los Datos CSV</p>
         <p>Se utilizará el comando view() que permite visualizar los datos en una tabla en Rstudio.</p>
         <p>Para saber las dimensiones de los datos en números de filas y columnas usamos el comando dim():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0;">dim(Paujil)</p>
+            <p style="margin: 0;"><em>dim(Paujil)</em></p>
         </div>
         <p>Para saber de manera ordenada los nombres de los campos de los datos se usa el comando names() y sort():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0;">sort(names(Paujil))</p>
+            <p style="margin: 0;"><em>sort(names(Paujil))</em></p>
         </div>
         <p>Para mostrar los datos sin repetir los elementos de una columna específica se usa el comando unique():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0;">unique(Paujil$countryCode)</p>
+            <p style="margin: 0;"><em>unique(Paujil$countryCode)</em></p>
         </div>
         <p>Para filtrar los datos guardándolos en una variable se usa el comando filter():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0;">Paujil_filtrado <- filter(Paujil, Paujil$countryCode == "PE")</p>
-            <p style="margin: 0;">dim(Paujil_filtrado)</p>
+            <p style="margin: 0;"><em>Paujil_filtrado <- filter(Paujil, Paujil$countryCode == "PE")</em></p>
+            <p style="margin: 0;"><em>dim(Paujil_filtrado)</em></p>
         </div>
         <p>Para recortar los datos en función de una selección se usa el comando subset():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0;">Paujil_cortado <- subset(Paujil_filtrado, !is.na(decimalLongitude))</p>
-            <p style="margin: 0;">dim(Paujil_cortado)</p>
+            <p style="margin: 0;"><em>Paujil_cortado <- subset(Paujil_filtrado, !is.na(decimalLongitude))</em></p>
+            <p style="margin: 0;"><em>dim(Paujil_cortado)</em></p>
         </div>
         <p>Por último, exportamos los datos usando el comando write.csv():</p>
         <div style="max-width: 100%; max-height: 200px; overflow-y: auto; background-color: #e0e0e0; padding: 10px; border-radius: 5px; border: 1px solid #888;">
-            <p style="margin: 0;">write.csv(Paujil, "C:/Users/frank/Desktop/PAUJIL/coordenada_data_paujil.csv")</p>
+            <p style="margin: 0;"><em>write.csv(Paujil, "C:/Users/frank/Desktop/PAUJIL/coordenada_data_paujil.csv")</em></p>
         </div>
     </div>
 </section>
