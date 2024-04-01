@@ -115,45 +115,46 @@
     <nav>
         <ul>
             <li><a href="#datos">Datos</a></li>
-            <li><a href="#importacion">Importación y Lectura de Datos CSV</a></li>
             <li><a href="#imagenes">Imágenes</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
     <section id="datos">
         <h2>Datos</h2>
-        <p>Los datos utilizados se descargaron de <a href="https://www.gbif.org/species/2482278" target="_blank">GBIF</a>, una red internacional e infraestructura de datos de acceso abierto que ofrece información de biodiversidad de las formas de vida en la tierra.</p>
-        <p>Para acceder a los datos:</p>
-        <ol>
-            <li>Acceda a GBIF con una cuenta de usuario.</li>
-            <li>Diríjase a la sección de Datos y haga clic en Registro de Presencia.</li>
-            <li>En el buscador, introduzca el nombre científico de la especie, en este caso, el Cormorán Guanay (Phalacrocorax bougainvillii).</li>
-            <li>Agregue un filtro, en este caso, Perú.</li>
-            <li>En el Visor del Registro de Presencia, haga clic en el botón de descarga (.csv).</li>
-        </ol>
+        <p>Aquí puedes visualizar datos:</p>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>30</td>
+            </tr>
+        </table>
     </section>
-    <section id="importacion">
-        <h2>Importación y Lectura de Datos CSV</h2>
-        <p><strong>Lectura de Datos CSV</strong></p>
-        <p>Se hace la lectura del archivo .csv con read.csv(), el cual contiene argumentos de la ruta del archivo y el tabulador como separador de las columnas representado por "\t".</p>
-        <p>Previamente se debe hacer llamado a las siguientes librerías:</p>
+    <section id="imagenes">
+        <h2>Imágenes</h2>
+        <p>Aquí puedes ver algunas imágenes:</p>
+        <div style="text-align: center;">
+            <img src="imagen1.jpg" alt="Imagen 1">
+            <img src="imagen2.jpg" alt="Imagen 2">
+        </div>
+    </section>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme a través de:</p>
         <ul>
-            <li>library(tidyverse)</li>
-            <li>library(sf)</li>
-            <li>library(ggplot)</li>
-            <li>library(ggplot2)</li>
-            <li>library(RColorBrewer)</li>
+            <li>Email: ejemplo@example.com</li>
+            <li>Teléfono: 123-456-7890</li>
         </ul>
-        <p>Se tipea las siguientes líneas de código:</p>
-        <pre>Paujil <- read.csv("C:/Users/frank/Desktop/PAUJIL/data_paujil.csv", sep="\t")</pre>
-        <p><strong>Visualización de los Datos CSV</strong></p>
-        <p>Se utilizará el comando view() que permite visualizar los datos en una tabla en Rstudio.</p>
-        <p>Para saber las dimensiones de los datos en números de filas y columnas usamos el comando dim():</p>
-        <pre>dim(Paujil)</pre>
     </section>
     <footer>
         <p>&copy; 2024 Mi Página Web con Índice Vertical</p>
     </footer>
 </body>
 </html>
-
