@@ -25,10 +25,7 @@
             width: 100%;
             font-family: Monaco, monospace; /* Cambia la fuente del título a Monaco */
         }
-        h1 {
-            font-family: Monaco, monospace; /* Estilo de fuente Gagalin */
-        }
-        h1::before {
+        header::before {
             content: "";
             position: absolute;
             top: 0;
@@ -37,6 +34,9 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5); /* Color de fondo negro con opacidad del 50% */
             z-index: -1;
+        }
+        h1 {
+            font-family: Monaco, monospace; /* Estilo de fuente Gagalin */
         }
         .title-container {
             background-image: url('paujil_fondo.jpg'); /* URL de tu imagen de fondo */
